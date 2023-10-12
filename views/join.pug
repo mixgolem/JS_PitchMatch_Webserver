@@ -1,0 +1,18 @@
+block content
+  link(rel='stylesheet' href='/main.css')
+  a(href="/")
+    img.main-img(src="/main.png")
+  .timeline
+    form#join-form(action='/auth/join' method='post')
+      .input-group
+        label(for='join-email') 가입할 이메일
+        input#join-email(type='email' name='email')
+      .input-group
+        label(for='join-nick') 닉네임
+        input#join-nick(type='text' name='nick')
+      .input-group
+        label(for='join-password') 패스워드
+        input#join-password(type='password' name='password')
+      if joinError
+        .error-message= joinError
+      button#join-btn.btn(type='submit') 가입하기!

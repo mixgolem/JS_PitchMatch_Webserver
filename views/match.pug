@@ -1,0 +1,172 @@
+html
+  head
+    link(rel='stylesheet' href='/epl.css')
+  a#match.menu_btn(href='/epl/match') 경기 데이터
+  a#epl.menu_btn(href='/epl') EPL 데이터
+  a(href="/")
+    img.main-img(src="/main.png")
+    title PitchMatch :: 경기 데이터
+  body
+    h1 경기 데이터
+    table
+      tr
+        th ID
+        th 홈
+        th 어웨이
+        th 매치
+        th 일시
+        th 장소
+        th 홈승
+        th 홈무
+        th 홈패
+        th 홈MMR
+        th 어웨이MMR
+      each match in matches
+        tr
+          td= match.id
+          td
+            - if (match.home === 'mancity')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png", alt="")
+            - else if (match.home === 'arsenal')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png", alt="")
+
+            - else if (match.home === 'manu')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png", alt="")
+
+            - else if (match.home === 'newcastle')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/96CcNNQ0AYDAbssP0V9LuQ_48x48.png", alt="")
+
+            - else if (match.home === 'liverpool')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png", alt="")
+
+            - else if (match.home === 'brighton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/EKIe0e-ZIphOcfQAwsuEEQ_48x48.png", alt="")
+
+
+            - else if (match.home === 'villa')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/uyNNelfnFvCEnsLrUL-j2Q_48x48.png", alt="")
+            - else if (match.home === 'spurs')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png", alt="")
+
+            - else if (match.home === 'brentford')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/QOUce0WQBYqnkSmN6_TxGA_48x48.png", alt="")
+            - else if (match.home === 'fullham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/Gh7_5p3n364p4vxeM8FhNg_48x48.png", alt="")
+            - else if (match.home === 'palace')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/8piQOzndGmApKYTcvyN9vA_48x48.png", alt="")
+
+
+            - else if (match.home === 'Chelsea')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png", alt="")
+
+
+            - else if (match.home === 'wolves')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/-WjHLbBIQO9xE2e2MW3OPQ_48x48.png", alt="")
+
+
+            - else if (match.home === 'westham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/bXkiyIzsbDip3x2FFcUU3A_48x48.png", alt="")
+
+
+
+            - else if (match.home === 'bournemouth')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/IcOt-hrK04B-RlRwI3R0yA_48x48.png", alt="")
+
+
+            - else if (match.home === 'nottingham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/Zr6FbE-8pDH7UBpWCO8U9A_48x48.png", alt="")
+
+
+            - else if (match.home === 'everton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/C3J47ea36cMBc4XPbp9aaA_48x48.png", alt="")
+
+
+            - else if (match.home === 'leicester')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/UDYY4FSlty6fXFBzvFfcyw_48x48.png", alt="")
+
+
+            - else if (match.home === 'leeds')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/5dqfOKpjjW6EwTAx_FysKQ_48x48.png", alt="")
+
+            - else if (match.home === 'Southampton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/y1V4sm2SEBiWUPRIYl5rfg_48x48.png", alt="")
+            - else
+                    img.team_img(src="main.png", alt="")
+            |  #{match.home}
+          td
+            - if (match.away === 'mancity')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png", alt="")
+            - else if (match.away === 'arsenal')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png", alt="")
+
+            - else if (match.away === 'manu')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png", alt="")
+
+            - else if (match.away === 'newcastle')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/96CcNNQ0AYDAbssP0V9LuQ_48x48.png", alt="")
+
+            - else if (match.away === 'liverpool')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png", alt="")
+
+            - else if (match.away === 'brighton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/EKIe0e-ZIphOcfQAwsuEEQ_48x48.png", alt="")
+
+
+            - else if (match.away === 'villa')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/uyNNelfnFvCEnsLrUL-j2Q_48x48.png", alt="")
+            - else if (match.away === 'spurs')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png", alt="")
+
+            - else if (match.away === 'brentford')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/QOUce0WQBYqnkSmN6_TxGA_48x48.png", alt="")
+            - else if (match.away === 'fullham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/Gh7_5p3n364p4vxeM8FhNg_48x48.png", alt="")
+            - else if (match.away === 'palace')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/8piQOzndGmApKYTcvyN9vA_48x48.png", alt="")
+
+
+            - else if (match.away === 'Chelsea')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png", alt="")
+
+
+            - else if (match.away === 'wolves')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/-WjHLbBIQO9xE2e2MW3OPQ_48x48.png", alt="")
+
+
+            - else if (match.away === 'westham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/bXkiyIzsbDip3x2FFcUU3A_48x48.png", alt="")
+
+
+
+            - else if (match.away === 'bournemouth')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/IcOt-hrK04B-RlRwI3R0yA_48x48.png", alt="")
+
+
+            - else if (match.away === 'nottingham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/Zr6FbE-8pDH7UBpWCO8U9A_48x48.png", alt="")
+
+
+            - else if (match.away === 'everton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/C3J47ea36cMBc4XPbp9aaA_48x48.png", alt="")
+
+
+            - else if (match.away === 'leicester')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/UDYY4FSlty6fXFBzvFfcyw_48x48.png", alt="")
+
+
+            - else if (match.away === 'leeds')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/5dqfOKpjjW6EwTAx_FysKQ_48x48.png", alt="")
+
+            - else if (match.away === 'Southampton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/y1V4sm2SEBiWUPRIYl5rfg_48x48.png", alt="")
+            - else
+                    img.team_img(src="main.png", alt="")
+            |  #{match.away}
+          td= match.property
+          td= match.date
+          td= match.place
+          td= match.home_win
+          td= match.home_draw
+          td= match.home_lose
+          td= match.home_mmr
+          td= match.away_mmr

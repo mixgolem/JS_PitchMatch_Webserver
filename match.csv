@@ -1,0 +1,15 @@
+"id";"home";"away";"property";"date";"place";"home_win";"home_draw";"home_lose";"home_mmr";"away_mmr"
+1;"mancity";"manu";"fa";"2023.06.03 23:00(KST)";"Wembley Stadium";3;0;2;3071;2207
+2;"arsenal";"wolves";"epl";"2023.05.29 00:30(KST)";"Emirates Stadium";2;2;1;2542;1145
+3;"villa";"brighton";"epl";"2023.05.29 00:30(KST)";"Villa Park";3;1;1;1504;1757
+4;"Chelsea";"newcastle";"epl";"2023.05.29 00:30(KST)";"Stamford Bridge";2;2;1;1749;2013
+5;"palace";"nottingham";"epl";"2023.05.29 00:30(KST)";"Selhurst Park";3;0;2;1322;995
+6;"everton";"bournemouth";"epl";"2023.05.29 00:30(KST)";"Goodison Park";2;2;1;833;955
+7;"leeds";"spurs";"epl";"2023.05.29 00:30(KST)";"Elland Road";1;1;3;620;2025
+8;"leicester";"westham";"epl";"2023.05.29 00:30(KST)";"King Power Stadium";2;2;1;1062;1259
+9;"manu";"fullham";"epl";"2023.05.29 00:30(KST)";"Old Trafford";3;1;1;2207;1311
+10;"Southampton";"liverpool";"epl";"2023.05.29 00:30(KST)";"St. Mary's Stadium";0;2;3;537;2558
+11;"manu";"Chelsea";"epl";"2023.05.26 04:00(KST)";"Old Trafford";3;1;1;2207;1749
+12;"brighton";"mancity";"epl";"2023.05.25 04:00(KST)";"American Express";0;2;3;1757;3071
+13;"newcastle";"leicester";"epl";"2023.05.25 04:00(KST)";"St James' Park";1;2;2;2013;1062
+14;"mancity";"Chelsea";"";"2023.05.22 00:00(KST)";"Etihad Stadium";4;1;0;3071;1749

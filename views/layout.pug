@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;700&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    meta(charset='UTF-8')
+    title= title
+    meta(name='viewport' content='width=device-width, user-scalable=no')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    link(rel='stylesheet' href='/main.css')
+    body
+      a#match.menu_btn(href='/epl/match') 경기 데이터
+      a#epl.menu_btn(href='/epl') EPL 데이터
+      a(href="/")
+        img.main-img(src="/main.png")
+    .mainframe
+      .container
+        .profile-wrap
+          .profile
+            if user && user.id
+              .user-name=user.nick + '님 안녕하세요'
+              .user-level
+                  | level: #{user.level}
+              .user-points
+                  | 경험치: #{user.points} / #{user.level*user.level}
+              .half
+                div 팔로잉
+                .count.following-count= user.Followings && user.Followings.length || 0
+              .half
+                div 팔로워
+                .count.follower-count= user.Followers && user.Followers.length || 0
+              input#my-id(type='hidden' value=user.id)
+              a#my-profile.btn(href='/profile') 내정보
+              a#logout.btn(href='/auth/logout') 로그아웃
+            else
+              form#login-form(action='/auth/login' method='post')
+                .input-group
+                  label(for='email') 이메일
+                  input#email(type='email' name='email' required autofocus)
+                .input-group
+                  label(for='password') 패스워드
+                  input#password(type='password' name='password' required)
+                if loginError
+                  .error-message= loginError
+                a#join.btn(href='/join') PitchMatch 가입하기
+                button#login.btn(type='submit') 로그인
+                a#kakao.btn(href='/auth/kakao') 카카오톡
+
+
+  block content

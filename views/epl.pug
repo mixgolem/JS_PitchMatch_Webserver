@@ -1,0 +1,129 @@
+html
+  head
+  link(rel='stylesheet' href='/epl.css')
+  a#match.menu_btn(href='/epl/match') 경기 데이터
+  a#epl.menu_btn(href='/epl') EPL 데이터
+  a(href="/")
+    img.main-img(src="/main.png")
+    title PitchMatch :: EPL 데이터
+  body
+    h1 EPL 데이터
+    table
+      tr
+        th 순위
+        th 팀
+        th 티어
+        th prev 승
+        th prev 무
+        th perv 패
+        th 승
+        th 무
+        th 패
+        th 승점
+        th MMR
+      each team in eplTeams
+        tr
+          td= team.num
+          td
+            - if (team.name === 'mancity')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/z44l-a0W1v5FmgPnemV6Xw_48x48.png", alt="")
+            - else if (team.name === 'arsenal')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/4us2nCgl6kgZc0t3hpW75Q_48x48.png", alt="")
+
+            - else if (team.name === 'manu')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/udQ6ns69PctCv143h-GeYw_48x48.png", alt="")
+
+            - else if (team.name === 'newcastle')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/96CcNNQ0AYDAbssP0V9LuQ_48x48.png", alt="")
+
+            - else if (team.name === 'liverpool')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/0iShHhASp5q1SL4JhtwJiw_48x48.png", alt="")
+
+            - else if (team.name === 'brighton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/EKIe0e-ZIphOcfQAwsuEEQ_48x48.png", alt="")
+
+
+            - else if (team.name === 'villa')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/uyNNelfnFvCEnsLrUL-j2Q_48x48.png", alt="")
+
+
+            - else if (team.name === 'spurs')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/k3Q_mKE98Dnohrcea0JFgQ_48x48.png", alt="")
+
+
+
+            - else if (team.name === 'brentford')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/QOUce0WQBYqnkSmN6_TxGA_48x48.png", alt="")
+
+
+            - else if (team.name === 'fullham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/Gh7_5p3n364p4vxeM8FhNg_48x48.png", alt="")
+
+
+            - else if (team.name === 'palace')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/8piQOzndGmApKYTcvyN9vA_48x48.png", alt="")
+
+
+            - else if (team.name === 'Chelsea')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/fhBITrIlbQxhVB6IjxUO6Q_48x48.png", alt="")
+
+
+            - else if (team.name === 'wolves')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/-WjHLbBIQO9xE2e2MW3OPQ_48x48.png", alt="")
+
+
+            - else if (team.name === 'westham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/bXkiyIzsbDip3x2FFcUU3A_48x48.png", alt="")
+
+
+
+            - else if (team.name === 'bournemouth')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/IcOt-hrK04B-RlRwI3R0yA_48x48.png", alt="")
+
+
+            - else if (team.name === 'nottingham')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/Zr6FbE-8pDH7UBpWCO8U9A_48x48.png", alt="")
+
+
+            - else if (team.name === 'everton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/C3J47ea36cMBc4XPbp9aaA_48x48.png", alt="")
+
+
+            - else if (team.name === 'leicester')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/UDYY4FSlty6fXFBzvFfcyw_48x48.png", alt="")
+
+
+            - else if (team.name === 'leeds')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/5dqfOKpjjW6EwTAx_FysKQ_48x48.png", alt="")
+
+            - else if (team.name === 'Southampton')
+                    img.team_img(src="https://ssl.gstatic.com/onebox/media/sports/logos/y1V4sm2SEBiWUPRIYl5rfg_48x48.png", alt="")
+            - else
+                    img.team_img(src="main.png", alt="")
+            |  #{team.name}
+          td= team.tier
+          td= team.prev_win
+          td= team.prev_draw
+          td= team.prev_lose
+          td= team.curr_win
+          td= team.curr_draw
+          td= team.curr_lose
+          td= team.curr_points
+          td= team.curr_mmr
+
+
+table
+  tr
+    th id
+    th 선수명
+    th 소속팀
+    th 이전 팀
+    th 이적료
+
+  each transferData in transfer
+    tr
+      td= transferData.id
+      td= transferData.player
+      td= transferData.to
+      td= transferData.from
+      td= transferData.price
